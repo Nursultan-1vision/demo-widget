@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merchant Site</title>
+    <script src="https://applepay.cdn-apple.com/jsapi/v1.1.0/apple-pay-sdk.js" crossorigin async data-initial-token="Your Apple Pay JS token"></script>
+</head>
+
+<body>
+    <button onclick="openPaymentWidgetHandler();">
+      Открыть платежный виджет
+    </button>
+    <!-- DEV -->
+    <!-- <script src="https://onevision-dev.front-office-front-widget.onevisionpay.com" defer></script>
+    <script>
+        function openPaymentWidgetHandler() {
+            openPaymentWidget({
+                    api_key: '79ee8224-8b4c-4657-a328-19eb5299e0b4',
+                    amount: 10,
+                    currency: "KZT",
+                    order_id: "otd-02",
+                    description: "strjnknjknjking",
+                    payment_type: "pay",
+                    payment_method: "ecom",
+                    items: [{
+                        merchant_id: "80ecbc64-d1e2-49c8-9eba-27cde389b511",
+                        service_id: "2ccb090b-b005-46e1-87e2-a13cbcb2c9fb",
+                        merchant_name: "Nurs test",
+                        name: "Nurs test",
+                        quantity: 1,
+                        amount_one_pcs: 10,
+                        amount_sum: 10,
+                    }],
+                    user_id: "string",
+                    email: "example@gmail.com",
+                    phone: "87475820552",
+                    success_url: "http://example.com",
+                    failure_url: "http://example.com",
+                    callback_url: "http://example.com",
+                    payment_lifetime: 1500,
+                    create_recurrent_profile: false,
+                    recurrent_profile_lifetime: 0,
+                    lang: "en",
+                    extra_params: {},
+                    payment_gateway_host: "https://onevision-dev.front-office-krakend.onevisionpay.com",
+                    payment_widget_host: "https://onevision-dev.front-office-front-widget.onevisionpay.com"
+                },
+                onSuccess = (success) => {
+                    console.log("success merchant", success)
+                },
+                onFail = (fail) => {
+                    console.log("fail merchant", fail)
+                });
+        }
+        // window.addEventListener("status", (el) => console.log(el));
+    </script> -->
+    <!-- PROD -->
+    <script src="https://widget.onevisionpay.com"></script>
+    <script>
+        // function openPaymentWidgetHandler() {
+        //     openPaymentWidget({
+        //             api_key: '73d70990-6080-4a89-b0e5-7c4592382cee',
+        //             // 2
+        //             // api_key: 'ca7648d4-4dc8-40a8-918c-e1a1d480c814',
+        //             amount: 100,
+        //             currency: "KZT",
+        //             order_id: "test_pay9",
+        //             description: "strjnknjknjking",
+        //             payment_type: "pay",
+        //             payment_method: "ecom",
+        //             items: [{
+        //                 merchant_id: "1e604d2c-3df9-44cc-9fec-2947d066c23a",
+        //                 // 2
+        //                 // merchant_id: "7e4c926c-65c0-43ab-ad73-4b83f1f1b5ca",
+        //                 // 2
+        //                 // service_id: "5916dd57-046e-4b13-946b-6bc3cc888559",
+        //                 service_id: "5916dd57-046e-4b13-946b-6bc3cc888559",
+        //                 merchant_name: "Nurs test",
+        //                 name: "Nurs test",
+        //                 quantity: 1,
+        //                 amount_one_pcs: 100,
+        //                 amount_sum: 100,
+        //             }],
+        //             user_id: "string",
+        //             email: "example@gmail.com",
+        //             phone: "87475820552",
+        //             success_url: "http://example.com",
+        //             failure_url: "http://example.com",
+        //             callback_url: "http://example.com",
+        //             payment_lifetime: 1500,
+        //             create_recurrent_profile: false,
+        //             recurrent_profile_lifetime: 0,
+        //             lang: "en",
+        //             extra_params: {},
+        //             payment_gateway_host: "https://api.onevisionpay.com",
+        //             payment_widget_host: "https://widget.onevisionpay.com"
+        //         },
+        //         onSuccess = (success) => {
+        //             console.log("success merchant", success)
+        //         },
+        //         onFail = (fail) => {
+        //             console.log("fail merchant", fail)
+        //         });
+        // }
+
+        function openPaymentWidgetHandler() {
+            openPaymentWidget({
+                    api_key: 'e0b459f6-a243-4788-aeb6-c942280d91d9',
+                    // 2
+                    // api_key: 'ca7648d4-4dc8-40a8-918c-e1a1d480c814',
+                    amount: 100,
+                    currency: "KZT",
+                    order_id: Math.random(),
+                    description: "strjnknjknjking",
+                    payment_type: "pay",
+                    payment_method: "ecom",
+                    items: [{
+                        merchant_id: "2776ff3a-0794-4978-ae67-cb07d7bd1850",
+                        // 2
+                        // merchant_id: "7e4c926c-65c0-43ab-ad73-4b83f1f1b5ca",
+                        // 2
+                        // service_id: "5916dd57-046e-4b13-946b-6bc3cc888559",
+                        service_id: "d347defe-344e-4dfc-a16d-f7cfab61bb18",
+                        merchant_name: "Nurs test",
+                        name: "Nurs test",
+                        quantity: 1,
+                        amount_one_pcs: 100,
+                        amount_sum: 100,
+                    }],
+                    user_id: "string",
+                    email: "example@gmail.com",
+                    phone: "87475820552",
+                    success_url: "http://example.com",
+                    failure_url: "http://example.com",
+                    callback_url: "http://example.com",
+                    payment_lifetime: 1500,
+                    create_recurrent_profile: false,
+                    recurrent_profile_lifetime: 0,
+                    lang: "en",
+                    extra_params: {},
+                    payment_gateway_host: "https://api.onevisionpay.com",
+                    payment_widget_host: "https://widget.onevisionpay.com"
+                },
+                onSuccess = (success) => {
+                    console.log("success merchant", success)
+                },
+                onFail = (fail) => {
+                    console.log("fail merchant", fail)
+                });
+        }
+    </script>
+</body>
+
+</html>
